@@ -44,4 +44,27 @@ function open(editPage, employee, index) {
     }
 ```
 
+---
+
+__Controller__:
+
+Функция проверки заполнения полей:
+
+```
+// Принимает аргументами editPage(boolean), emplpoyee(Object), index(Number)
+
+function check_inputs() { 
+        if (name.value != '' &&
+            surname.value != '' &&
+            seniority.value != '' &&
+            age.value != '' &&
+            address.value != '') {
+                return true  // Если все поля заполнены, возвращаем успех
+        }else {
+            return alert('Вы заполнили не все поля.')  // Иначе возвращаем оповещение об ошибке
+        }
+    }
+```
+
+
 
