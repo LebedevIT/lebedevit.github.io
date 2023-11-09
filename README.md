@@ -66,5 +66,39 @@ function check_inputs() {
     }
 ```
 
+Функция контроля клика на кнопку "Добавить":
 
+```
+function add_click_handler() {
+        if (check_inputs()) {  // Запускаем контроллер на проверку полей
+            const new_employee = {   // Если всё хорошо, собираем объект
+                name: name.value,
+                surname: surname.value,
+                seniority: seniority.value,
+                age: age.value,
+                address: address.value
+            }
+            employees.add_new_employee(new_employee)  // Отправляем объект в модель
+            isModalOpened.value = false  // Закрываем модальное окно
+        }
+    }
+```
+
+Функция контроля клика на кнопку "Добавить":
+
+```
+function save_click_handler() {
+        if (check_inputs()) { // Запускаем контроллер на проверку полей
+            const edit_employee = { // Если всё хорошо, собираем объект
+                name: name.value,
+                surname: surname.value,
+                seniority: seniority.value,
+                age: age.value,
+                address: address.value
+            }
+            employees.edit_employee(edit_employee, id.value) // Отправляем объект в модель
+            isModalOpened.value = false  // Закрываем модальное окно
+        }
+    }
+```
 
